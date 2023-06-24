@@ -1,6 +1,6 @@
 import "./App.css";
 
-import React, {useState} from "react";
+import React from "react";
 // import PropTypes from 'prop-types'
 import NavBar from "./components/NavBar";
 
@@ -15,11 +15,14 @@ const App =()=>{
 
   // c = "Vishal";
 
-  const pageSize = 15;
-  const apiKey = process.env.REACT_APP_NEWS_API;
+  pageSize = 15;
+  apiKey = process.env.REACT_APP_NEWS_API;
 
-  const[progress,setProgress] = useState(0);
+  const[progress,setprogress] = useState(0);
 
+  const setProgress = (progress)=>{
+    setprogress(progress);
+  }
     return (
       <>
         {/* Hello my first class based component {this.c} */}
@@ -70,5 +73,3 @@ const App =()=>{
     );
   
 }
-
-export default App;
